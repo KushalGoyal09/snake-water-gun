@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
 }
-
 .primary-heading {
     font-size: 2.5rem;
     text-align: center;
@@ -29,9 +28,16 @@
 }
 .btnbox {
     margin-top: 30vh;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.btnbox input {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100px;
 }
 .animation-1 {
-    animation: slide 3S forwards;
+    animation: slide 2s forwards;
 }
 
 @keyframes slide {
@@ -41,4 +47,115 @@
     to {
       transform: translateX(0);
     }
+}
+
+.container {
+    grid-template-columns: repeat(3,1fr);
+    display: none;
+}
+
+.name {
+    text-align: center;
+    background-color: bisque;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.score {
+    text-align: center;
+    background-color: rgba(127, 255, 212, 0.4);
+    font-size: 1.6rem;
+    padding: 8px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    background-color: rgba(128, 255, 0, 0.395);
+    padding: 1rem;
+}
+.option-img {
+    width: 80px;
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+}
+.selected-img {
+    width: 80px;
+    margin: auto;
+    padding: 10px;
+}
+#person .option-img:hover {
+    border: 5px solid goldenrod;
+    border-radius: 5px;
+}
+#computer .option-img {
+    cursor: not-allowed;
+}
+
+.game-space {
+    background-image: url("static/bgimg.png");
+    display: flex;
+}
+.round-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin: 0 0 4rem 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    display: none;
+}
+.max-round-heading {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 4rem;
+    text-align: right;
+    margin-right: 20px;
+    font-size: 1.5rem;
+    display: none;
+}
+.message {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+.visible {
+    padding: 20px;
+    height: unset;
+}
+.message:nth-child(even) {
+    background-color: #eef;
+}
+.message:nth-child(odd) {
+    background-color: #eee;
+}
+.message-container {
+    grid-template-columns: repeat(3,1fr);
+    display: none;
+}
+.winner-heading {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    margin: 1rem 0;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
 }
